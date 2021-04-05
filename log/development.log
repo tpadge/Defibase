@@ -47,3 +47,285 @@ Migrating to CreateUsers (20210405184703)
   [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "timothy@timothy.com"], ["password_digest", "$2a$12$JLKE4CusfDNyweH.nvuUHefVcYBykHvhsJFvGu.Fq.wrKsxrHvwnu"], ["session_token", "BRTZcefG2gAymQrSmu7xCw"], ["created_at", "2021-04-05 20:43:04.885452"], ["updated_at", "2021-04-05 20:43:04.885452"]]
   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2021-04-05 14:45:00 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/timpadgett/Desktop/Defibase/defibase/app/controllers/application_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...lid credentials'] }, status 401
+...                            ^~~):
+  
+app/controllers/application_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-04-05 14:45:23 -0700
+  
+SyntaxError (/Users/timpadgett/Desktop/Defibase/defibase/app/controllers/application_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+...lid credentials'] }, status 401
+...                            ^~~):
+  
+app/controllers/application_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_do or '{' or '('
+app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-04-05 14:46:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3709009570224258305_70284465105180'
+Started GET "/" for ::1 at 2021-04-05 14:49:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3709009570224258305_70284498812520'
+Started GET "/" for ::1 at 2021-04-05 14:50:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3709009570224258305_70284433192360'
+Started GET "/" for ::1 at 2021-04-05 14:50:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery_ujs' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__3709009570224258305_70284497567160'
+Started GET "/" for ::1 at 2021-04-05 14:51:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1757ms (Views: 1751.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 14:53:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__3709009570224258305_70284489797860'
+Started GET "/" for ::1 at 2021-04-05 14:57:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/config
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/images
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/app/assets/stylesheets
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actioncable-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activestorage-5.2.5/app/assets/javascripts
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/actionview-5.2.5/lib/assets/compiled
+  /Users/timpadgett/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/timpadgett/Desktop/Defibase/defibase/node_modules):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:         <script type="text/javascript">
+    12:       window.CLOUDINARY_OPTIONS = {
+    13:         cloud_name: "<%= ENV['CLOUD_NAME'] %>",
+  
+app/assets/javascripts/application.js:17
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__3709009570224258305_70284467512060'
+Started GET "/" for ::1 at 2021-04-05 14:58:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 180ms (Views: 177.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:03:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 396ms (Views: 388.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:04:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 317ms (Views: 313.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:08:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 349ms (Views: 346.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:09:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 330ms (Views: 327.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:10:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 368ms (Views: 365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:18:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 108ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:20:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 428ms (Views: 425.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:20:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 293ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:22:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-04-05 15:22:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
