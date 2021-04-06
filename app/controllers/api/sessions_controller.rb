@@ -2,14 +2,14 @@ class Api::SessionsController < ApplicationController
 
   def create
     @user = User.find_by_credentials(
-        params[:user][:username],
+        params[:user][:email],
         params[:user][:password]
       )
     if @user
       login(@user)
       render "api/users/show"
     else
-      render json: ["Invalid credentials"]
+      render json: ["Invalid credentials"], status: 401
     end
   end
 
@@ -19,7 +19,7 @@ class Api::SessionsController < ApplicationController
       logout
       render "api/users/show"
     else
-      render json: ["Current User does not exist"]
+      render json: ["Current User does not exist"], status: 404
     end
   end
 end
