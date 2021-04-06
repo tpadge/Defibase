@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
     });
   }
 
-  handleSubmit(e) { //seeminglly not functioning, line 41 call
+  handleSubmit(e) { 
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
