@@ -15,7 +15,7 @@ const Navbar = ({ currentUser, logout }) => {
   const activeUser = () => (
     <hgroup className="header-group">
       <h3>Current User: {currentUser.email}</h3>
-      <button classname="header-button" onClick={logout}>Log Out</button>
+      <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>
   );
 

@@ -8,7 +8,7 @@ import configureStore from './store/store'
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   let store;
-  if (window.currentUser) {
+  if (window.currentUser) { //gets currentUser from appl.html.erb
     const preloadedState = {
       session: { id: window.currentUser.id },
       entities: {

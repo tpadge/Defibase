@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
-    <% if current_user %>
+    <% if logged_in? %>
       <script>
         window.currentUser = {
           "id": <%= current_user.id %>,
@@ -17,9 +17,21 @@
         };
       </script>
     <% end %>
-  </head>
+
+
+  </head> 
   
   <body>
     <%= yield %>
   </body>
 </html>
+
+   <%# <% if logged_in? %>
+  <%# <script type="text/javascript">
+    <%# window.currentUser = <%= render(
+    <%#   "api/users/_user.json.jbuilder",
+    <%#   user: current_user
+  <%#   ).html_safe %>
+   <%#    </script>
+   <%#  <% end %>  
+    
