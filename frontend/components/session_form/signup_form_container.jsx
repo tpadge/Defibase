@@ -15,6 +15,7 @@ const mSTP = (state) => {
 const mDTP = dispatch => {
   return {
     processForm: (user) =>  dispatch(signup(user)),
+    demoLogin: () => dispatch(signup({ email: "kilativ@hte.eth", password: "sendit" }))
   };
 };
 

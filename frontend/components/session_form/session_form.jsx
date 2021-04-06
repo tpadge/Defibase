@@ -34,7 +34,15 @@ class SessionForm extends React.Component {
     );
   }
 
+  demo() { 
+    if (this.props.formType === 'login') { 
+    return (
+    <button className="demo-user-button" onClick={this.props.demoLogin}>Demo Login</button>
+    )
+  } }
+
   render() {
+
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box"> 
@@ -60,6 +68,7 @@ class SessionForm extends React.Component {
             <br />
             <input className="session-submit" type="submit" value={this.props.formType}/>
           </div>
+            {this.demo()}
         </form>
       </div>
     );
