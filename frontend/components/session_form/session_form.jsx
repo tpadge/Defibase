@@ -8,6 +8,11 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+
+  }
+
+  componentDidMount() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -47,9 +52,7 @@ class SessionForm extends React.Component {
       <main className="form-main">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box"> 
-          <div className="form-label">Create your account or Sign in</div>
-          {/* Please {this.props.formType} or {this.props.navLink} */}
-   
+          <div className="form-label">Create your account or Sign in</div>   
           <div className="login-form">
             <br />
             <label ><div className="form-input-label">Email</div>
