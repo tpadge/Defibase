@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="form-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error=${i}`}>  
             {error}
@@ -46,29 +46,30 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box"> 
-          Defibase
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
+          <div className="form-label">Create your account or Sign in</div>
+          {/* Please {this.props.formType} or {this.props.navLink} */}
           {this.renderErrors()}
           <div className="login-form">
             <br />
-            <label>Email
+            <label ><div className="form-input-label">Email</div>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="login-input" />
             </label>
             <br />
-            <label>Password
+            <label ><div className="form-input-label">Password</div>
             <input type="password"
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input" />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={this.props.formType}/>
-          </div>
+            <button className="session-submit" type="submit">{this.props.formType}</button>
+            <br />
             {this.demo()}
+          </div>
+    
         </form>
       </div>
     );

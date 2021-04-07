@@ -10,9 +10,6 @@ import Splash from './splash/splash';
 const App = (props) => (
   <div>
     <header>
-      <Link to="/" className="header-link">
-        <h3>Defibase</h3>
-      </Link>
     <NavbarContainer/>
     </header>
 

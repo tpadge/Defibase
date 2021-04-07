@@ -1,0 +1,65 @@
+.navbar-container {
+  font-family: lato;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.568);
+  align-items: center;
+  height: 67px;
+}
+
+.logo {
+  color: rgb(22, 82, 240);
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  padding-left: 72px;
+}
+
+.session-button {
+  background-color: rgb(22, 82, 240);
+  border: 1px solid rgb(22, 82, 240);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-right: 68px;
+}
+
+.session-button:hover {
+    background-color: rgb(17, 60, 220);
+    border-color: rgb(17, 60, 220);
+    color: rgb(255, 255, 255);
+}
+
+.signin-button {
+  background-color: rgb(22, 82, 240);
+  border: 1px solid rgb(22, 82, 240);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.signin-button:hover {
+    background-color: rgb(17, 60, 220);
+    border-color: rgb(17, 60, 220);
+    color: rgb(255, 255, 255);
+}
+
+.user-greeting {
+  font-size: 14px;
+  font-weight: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.user-email {
+  padding-right: 44px;
+  text-align: center;
+  font-weight: 400;
+}

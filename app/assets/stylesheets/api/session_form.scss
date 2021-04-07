@@ -1,0 +1,81 @@
+.login-form-container {
+  font-family: lato;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.form-label {
+  font-size: 26px;
+}
+
+.login-form {
+  width: 480px;
+  height: 440px;
+  border: 1px solid rgba(211, 211, 211, 0.568);
+  border-radius: 4px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.login-input {
+  border: 1px solid rgba(211, 211, 211, 0.568);
+  border-radius: 4px;
+  font-size: 18px;
+  padding-left: 12px;
+  outline-color: chartreuse;
+  height: 44px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form-input-label {
+    font-size: 22px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgba(0, 0, 0, 0.384);
+}
+
+.session-submit {
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 80ms ease-in-out 0s;
+  font-size: 18px;
+  background-color: rgb(22, 82, 240);
+  border: 1px solid rgb(22, 82, 240);
+  padding: 24px 68px;
+  margin-top: 12px;
+}
+
+.session-submit:hover {
+  border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+    color: rgb(255, 255, 255);
+}
+
+.demo-user-button {
+    color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 80ms ease-in-out 0s;
+  font-size: 18px;
+  border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+  padding: 24px 40px;
+  margin-top: 22px;
+}
+
+.demo-user-button:hover {
+  background-color:rgba(0, 0, 0, 0.733);
+  border: 1px solid rgba(0, 0, 0, 0.733);
+    color: rgb(255, 255, 255);
+}
+
+.form-errors {
+  padding-top: 12px;
+  color: red;
+}
