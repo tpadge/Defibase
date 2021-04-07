@@ -1,3 +1,43 @@
-h1 {
-  font-size: 100px;
+.splash-greet h1 {
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 1.15;
+}
+
+.splash-greet h2 {
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: 300;
+    width: 650px;
+    padding-bottom: 16px;
+}
+
+.splash-greet {
+    padding-top: 200px;
+    font-family: Lato;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 725px;
+    text-align: center;
+}
+
+.splash-greet button {
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 80ms ease-in-out 0s;
+  font-size: 16px;
+  border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+  padding: 24px 40px;
+}
+
+.splash-greet button:hover {
+    background-color: rgb(0, 165, 93);
+    border-color: rgb(0, 165, 93);
+    color: rgb(255, 255, 255);
 }
