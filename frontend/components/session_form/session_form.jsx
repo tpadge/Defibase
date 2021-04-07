@@ -44,11 +44,12 @@ class SessionForm extends React.Component {
   render() {
 
     return (
+      <main className="form-main">
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box"> 
           <div className="form-label">Create your account or Sign in</div>
           {/* Please {this.props.formType} or {this.props.navLink} */}
-          {this.renderErrors()}
+   
           <div className="login-form">
             <br />
             <label ><div className="form-input-label">Email</div>
@@ -68,10 +69,12 @@ class SessionForm extends React.Component {
             <button className="session-submit" type="submit">{this.props.formType}</button>
             <br />
             {this.demo()}
+            {this.renderErrors()}
           </div>
     
         </form>
       </div>
+      </main>
     );
   }
 }

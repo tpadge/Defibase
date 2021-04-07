@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 
 const Splash = (props) => {
   return (
-    <main>
+    <main className="splash-main">
+      <p className="splash-pill">Get free Ethereum</p>
       <div className="splash-greet">
       <h1>Buy and sell cryptocurrrency</h1>
       <h2>Defibase is the easiest place to buy and sell cryptocurrrency.

@@ -3,20 +3,24 @@
   margin: 0 auto;
   text-align: center;
   padding-top: 32px;
+  background-color: rgb(22, 82, 240);
+  height: 660px;
 }
 
 .form-label {
   font-size: 26px;
+  color: white;
 }
 
 .login-form {
-  width: 480px;
-  height: 440px;
+  width: 460px;
+  height: 460px;
   border: 1px solid rgba(211, 211, 211, 0.568);
   border-radius: 4px;
   margin: 0 auto;
   text-align: center;
   margin-top: 32px;
+  background-color: white;
 }
 
 .login-input {

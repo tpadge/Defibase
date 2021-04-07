@@ -1,3 +1,41 @@
+.splash-main::after {
+  content: "";
+  background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 69%, rgba(0,0,0,0) 100%), image_url("splash-back.jpeg") ;
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  margin-top: 100px;
+}
+
+.splash-main {
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.splash-pill {
+  font-family: lato;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: rgb(241, 243, 245);
+  color: rgb(22, 82, 240);
+  font-weight: 600;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 16px;
+  padding-left: 20px;
+  margin-top: 70px;
+}
 .splash-greet h1 {
   font-weight: 700;
   font-size: 62px;
@@ -14,7 +52,7 @@
 }
 
 .splash-greet {
-    padding-top: 180px;
+    padding-top: 40px;
     font-family: Lato;
     display: flex;
     align-items: center;
@@ -23,6 +61,7 @@
     width: 100%;
     max-width: 725px;
     text-align: center;
+    padding-bottom: 72px;
 }
 
 .splash-greet button {
