@@ -7,3 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create({ email: "kilativ@hte.eth", password: "sendit" })
+
+bitcoin = Currency.create({
+	symbol: 'BTC',
+	name: 'Bitcoin',
+})
+
+ethereum = Currency.create({
+	symbol: 'ETH',
+	name: 'Ethereum',
+})
