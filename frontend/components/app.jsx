@@ -20,6 +20,7 @@ const App = (props) => (
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={Splash} />
     <Route exact path="/coins" component={CoinIndex} />
+    <Route path= "/coins/:id" component={CoinShow} />
   </Switch>
   </div>
 

@@ -81,27 +81,6 @@ class CoinIndex extends React.Component {
         </ul>
       </div>
       </div>
-      // <div className="index-main">
-      //   <ul>
-      //    {Object.keys(this.props.list).map(title => {
-          
-      //      return (
-      //      <li className="index-list">
-      //        <div className="index-item">
-      //         <div>{this.capitalize(title)}</div>
-      //         <div>{this.formatNumber(list[title].usd)}</div>
-      //         <div>{ this.formatNumber(list[title].usd_market_cap.toFixed(2)) }</div>
-      //         <div>{this.formatNumber(list[title].usd_24h_vol.toFixed(2))}</div>
-      //         <div>{ list[title].usd_24h_change.toFixed(2) }</div >
-      //         <button className="view-button"><Link to={`/coins/${title}`}>View</Link></button>
-      //         <button className="watch-button">Watch</button>
-      //        </div>
-      //      </li>
-           
-      //      )
-      //    })}
-      //   </ul>
-      // </div>
     )
   }
 }

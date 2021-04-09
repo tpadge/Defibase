@@ -11,7 +11,10 @@ const _nullDetails = Object.freeze({
   marketCap: null,
   volume: null,
   circulatingSup: null,
-  ath: null
+  ath: null,
+  writeup: null,
+  athdate: null,
+  website: null
 });
 
 const detailsReducer = (state = _nullDetails, action) => {
@@ -20,15 +23,18 @@ const detailsReducer = (state = _nullDetails, action) => {
 
   switch (action.type) {
     case RECEIVE_COIN:
-      let newImage = action.response[0].image;
-      let newName = action.response[0].name;
-      let newSymbol = action.response[0].symbol;
-      let currentPrice = action.response[0].current_price;
-      let newChange = action.response[0].price_change_percentage_24h;
-      let newCap = action.response[0].market_cap;
-      let newVolume = action.response[0].total_volume;
-      let newCirculatingSup = action.response[0].circulating_supply;
-      let newATH = action.response[0].ath;
+      let newImage = action.response.image.small;
+      let newName = action.response.name;
+      let newSymbol = action.response.symbol;
+      let currentPrice = action.response.market_data.current_price.usd;
+      let newChange = action.response.market_data.price_change_percentage_24h;
+      let newCap = action.response.market_data.market_cap.usd;
+      let newVolume = action.response.market_data.total_volume;
+      let newCirculatingSup = action.response.market_data.circulating_supply;
+      let newATH = action.response.market_data.ath.usd;
+      let newWriteup = action.response.description.en;
+      let newATHdate = action.response.market_data.ath_date.usd;
+      let newWebsite = action.response.links.homepage[0];
       newState.image = newImage
       newState.name = newName;
       newState.symbol = newSymbol;
@@ -38,6 +44,9 @@ const detailsReducer = (state = _nullDetails, action) => {
       newState.volume = newVolume;
       newState.circulatingSup = newCirculatingSup;
       newState.ath = newATH;
+      newState.writeup = newWriteup;
+      newState.athdate = newATHdate;
+      newState.website = newWebsite;
       return newState;
     case RECEIVE_COINS:
       let indexImage = action.response[0].image;

@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
-import { getDetails, getChartDetails, getList } from './utils/coin_compare';
-// import { getPrice, getCGPrice } from './actions/coin_actions';
+import { getDetails, getChartDetails, getList,} from './utils/coin_compare';
+
 
 
 
