@@ -1,0 +1,15 @@
+.index-main {
+  font-family: lato;
+  font-size: 16px;
+}
+
+.index-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.badge {
+  height: 30px;
+  width: auto;
+}

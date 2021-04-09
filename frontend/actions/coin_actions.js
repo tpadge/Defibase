@@ -1,19 +1,43 @@
-import * as CoinGecko from '../utils/coinGecko';
 import * as CoinAPIUtil from '../utils/coin_compare';
 
+export const RECEIVE_COIN = "RECEIVE_COIN";
+export const RECEIVE_COINS = "RECEIVE_COINS";
+export const RECEIVE_LIST = "RECEIVE_LIST";
 
-export const RECEIVE_PRICE = "RECEIVE_PRICE";
-
-const receivePrice = response => ({
-  type: RECEIVE_PRICE,
+const receiveCoin = response => ({
+  type: RECEIVE_COIN,
   response
 });
 
-export const getPrice = symbol => dispatch => (
-  CoinAPIUtil.getPrice(symbol)
-  .then(response => (
-    dispatch(receivePrice(response))
-  ))
+const receiveCoins = response => ({
+  type: RECEIVE_COINS,
+  response
+})
+
+const receiveList = response => ({
+  type: RECEIVE_LIST,
+  response
+})
+
+export const getCoin = name => dispatch => (
+  CoinAPIUtil.getDetails(name)
+    .then(response => (
+      dispatch(receiveCoin(response))
+    ))
+);
+
+export const getCoins = name => dispatch => (
+  CoinAPIUtil.getDetails(name)
+    .then(response => (
+      dispatch(receiveCoins(response))
+    ))
+);
+
+export const getList = () => dispatch => (
+  CoinAPIUtil.getList()
+    .then(response => (
+      dispatch(receiveList(response))
+    ))
 );
 
 

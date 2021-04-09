@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
-import { fetchFullDetails, fetchBasicDetails } from './utils/coinGecko';
-import { getPrice } from './actions/coin_actions';
+import { getDetails, getChartDetails, getList } from './utils/coin_compare';
+// import { getPrice, getCGPrice } from './actions/coin_actions';
 
 
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   window.getState = store.getState;
-  window.fetchFullDetails = fetchFullDetails;
-  window.fetchBasicDetails = fetchBasicDetails;
-  window.getPrice = getPrice;
+  window.getDetails = getDetails;
+  window.getChartDetails = getChartDetails;
+  window.getList = getList;
 });

@@ -6,3 +6,25 @@ export const getPrice = symbol => (
     method: 'GET'
   })
 );
+
+export const getList = () => (
+  $.ajax({
+    url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=decentralized_finance&order=market_cap_desc&per_page=50&page=1&sparkline=true&price_change_percentage=24h
+`,
+    method: 'GET'
+  })
+)
+
+export const getDetails = name => (
+  $.ajax({
+    url: `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${name}&order=market_cap_desc&per_page=100&page=1&sparkline=true`,
+    method: 'GET'
+  })
+);
+
+export const getChartDetails = name => (
+  $.ajax({
+    url: `https://api.coingecko.com/api/v3/coins/${name}/market_chart?vs_currency=usd&days=30&interval=daily`,
+    method: 'GET'
+  })
+)
