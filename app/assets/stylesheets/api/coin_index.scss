@@ -20,22 +20,21 @@
 }
 
 .watchlist {
-  border: 1px solid rgb(5, 177, 105);
-  background-color: rgb(5, 177, 105);
+  font-size: 15px;
+  border: 1px solid rgba(211, 211, 211, 0.304);
+  background-color: rgb(255, 255, 255);
   transition: all 80ms ease-in-out 0s;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
+  color: rgba(0, 0, 0, 0.377);
+  font-weight: 700;
   padding: 18px 26px;
-  border-radius: 10px;
+  border-radius: 4px;
   float: right;
   margin-right: 84px;
 }
 
 .watchlist:hover {
-    background-color: rgb(0, 165, 93);
-    border-color: rgb(0, 165, 93);
-    color: rgb(255, 255, 255);
+  border-color: rgb(22, 82, 240);
+  color: rgb(22, 82, 240);
     cursor: pointer;
 }
 
