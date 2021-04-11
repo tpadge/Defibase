@@ -1,4 +1,4 @@
-import { RECEIVE_COIN, RECEIVE_COINS } from '../actions/coin_actions';
+import { RECEIVE_COIN, RECEIVE_COINS} from '../actions/coin_actions';
 import merge from 'lodash/merge';
 
 
@@ -14,7 +14,8 @@ const _nullDetails = Object.freeze({
   ath: null,
   writeup: null,
   athdate: null,
-  website: null
+  website: null,
+  trade: null
 });
 
 const detailsReducer = (state = _nullDetails, action) => {
@@ -35,6 +36,7 @@ const detailsReducer = (state = _nullDetails, action) => {
       let newWriteup = action.response.description.en;
       let newATHdate = action.response.market_data.ath_date.usd;
       let newWebsite = action.response.links.homepage[0];
+      let newTrade = action.response.tickers[8].trade_url;
       newState.image = newImage
       newState.name = newName;
       newState.symbol = newSymbol;
@@ -47,6 +49,7 @@ const detailsReducer = (state = _nullDetails, action) => {
       newState.writeup = newWriteup;
       newState.athdate = newATHdate;
       newState.website = newWebsite;
+      newState.trade = newTrade;
       return newState;
     case RECEIVE_COINS:
       let indexImage = action.response[0].image;

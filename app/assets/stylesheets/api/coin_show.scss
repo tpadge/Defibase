@@ -2,10 +2,20 @@
   font-family: lato;
   width: 86%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
+.back {
+  color: rgba(0, 0, 0, 0.47);
+  font-weight: 700;
+  font-size: 16px;
+  padding-bottom: 26px;
+  transition: all 80ms ease-in-out 0s;
+}
 
+.back:hover {
+  color: rgb(22, 82, 240);
+}
 
 .show-names {
   display: flex;
@@ -55,9 +65,33 @@
   color: rgb(22, 82, 240);
 }
 
+.show-trade-button {
+    margin: 0px;
+    margin-right: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 80ms ease-in-out 0s;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid rgb(236, 239, 241);
+    background-color: rgb(22, 82, 240);
+    color: white;
+}
+
+.show-trade-button:hover {
+  border-color: rgb(22, 82, 240);
+  background-color: white;
+  color: rgb(22, 82, 240);
+}
+
 .show-tracking {
   padding-top: 40px;
   display: flex;
+}
+
+.line {
+  padding-top: 50px;
 }
 
 .chart-box {
@@ -65,6 +99,38 @@
   border-radius: 4px;
   height: 360px;
   width: 720px;
+  flex-flow: column wrap;
+  overflow: hidden;
+}
+
+.chart-strings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.chart-string-nums {
+  display: flex;
+}
+
+.chart-string-nums h1 {
+ padding-top: 20px;
+ padding-left: 20px;
+ font-size: 46px;
+ font-weight: 400;
+}
+
+.chart-string-nums p {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.chart-string-words {
+  color: rgba(0, 0, 0, 0.47);
+  font-weight: 700;
+  font-size: 14px;
+  padding-right: 20px;
 }
 
 .show-price-details {

@@ -22,9 +22,9 @@ export const getDetails = name => (
   })
 );
 
-export const getChartDetails = name => (
+export const getChart = name => (
   $.ajax({
     url: `https://api.coingecko.com/api/v3/coins/${name}/market_chart?vs_currency=usd&days=30&interval=daily`,
     method: 'GET'
   })
-)
+);
