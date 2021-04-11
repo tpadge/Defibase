@@ -121,9 +121,16 @@
  font-weight: 400;
 }
 
-.chart-string-nums p {
+.chart-string-nums-up {
   padding: 20px;
   font-size: 20px;
+  color: green;
+}
+
+.chart-string-nums-down  {
+  padding: 20px;
+  font-size: 20px;
+  color: red;
 }
 
 .chart-string-words {

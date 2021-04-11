@@ -60,7 +60,11 @@ class CoinShow extends React.Component {
             <div className="chart-strings">
               <div className="chart-string-nums">
                   <h1>${this.formatNumber(parseFloat(this.props.coins.price).toFixed(2))}</h1>
-                  <p>{parseFloat(this.props.coins.change).toFixed(2)}%</p>
+                  <div className={
+                     parseFloat(this.props.coins.change) < 0
+                      ? "chart-string-nums-down"
+                      : "chart-string-nums-up"
+                  }>{parseFloat(this.props.coins.change).toFixed(2)}%</div>
               </div>
                 <div className="chart-string-words">
                   <h2>PAST 30 DAYS</h2>

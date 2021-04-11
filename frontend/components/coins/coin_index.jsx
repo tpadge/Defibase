@@ -65,7 +65,11 @@ class CoinIndex extends React.Component {
                 </div>
                 <div className="price-info">
                   <div className="price">${this.formatNumber(list[title].current_price.toFixed(2))}</div>
-                  <div className="change">{list[title].price_change_percentage_24h.toFixed(2)}%</div>
+                  <div className={
+                      list[title].price_change_percentage_24h < 0
+                            ? "change-down"
+                            : "change-up"
+                  }>{list[title].price_change_percentage_24h.toFixed(2)}%</div>
                   <div className="volume">${this.formatNumber(list[title].total_volume)}</div>
                   <div className="market-cap">${this.formatNumber(list[title].market_cap)}</div>
                   <button className="view-button"><Link to={`/coins/${list[title].id}`}>View</Link></button>

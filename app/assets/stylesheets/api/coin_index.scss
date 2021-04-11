@@ -105,9 +105,16 @@
   left: 360px;
 }
 
-.change {
+.change-up {
   position: absolute;
   left: 500px;
+  color: green;
+}
+
+.change-down {
+  position: absolute;
+  left: 500px;
+  color: red;
 }
 
 .volume {
