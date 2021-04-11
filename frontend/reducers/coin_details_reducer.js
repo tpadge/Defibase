@@ -28,7 +28,7 @@ const detailsReducer = (state = _nullDetails, action) => {
       let newName = action.response.name;
       let newSymbol = action.response.symbol;
       let currentPrice = action.response.market_data.current_price.usd;
-      let newChange = action.response.market_data.price_change_percentage_24h;
+      let newChange = action.response.market_data.price_change_percentage_30d;
       let newCap = action.response.market_data.market_cap.usd;
       let newVolume = action.response.market_data.total_volume.usd;
       let newCirculatingSup = action.response.market_data.circulating_supply;
