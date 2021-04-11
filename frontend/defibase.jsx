@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
+import { getDetails, getChartDetails, getList,getChart} from './utils/coin_compare';
+
 
 
 
@@ -24,4 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   window.getState = store.getState;
+  window.getDetails = getDetails;
+  window.getChartDetails = getChartDetails;
+  window.getList = getList;
+  window.getChart = getChart;
 });
