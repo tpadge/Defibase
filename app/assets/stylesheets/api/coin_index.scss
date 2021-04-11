@@ -111,6 +111,10 @@
   color: green;
 }
 
+.change-up:before {
+  content: "+";
+}
+
 .change-down {
   position: absolute;
   left: 500px;
