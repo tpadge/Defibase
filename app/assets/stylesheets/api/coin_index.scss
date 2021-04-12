@@ -2,7 +2,6 @@
   font-family: lato;
   font-size: 15px;
   width: 1100px;
-
   margin: 0 auto;
   font-weight: 400;
 }
@@ -10,7 +9,7 @@
 .index-welcome {
   font-family: lato;
   height: 300px;
-  padding-top: 20px;
+  margin-top: 60px;
   width: 100%;
   display: block;
   position: relative;
@@ -66,126 +65,165 @@
   margin-top: 20px;
 }
 
-.coins {
-  border: 1px solid rgba(211, 211, 211, 0.404);
-  border-bottom: none;
-  border-radius: 4px;
-  transition: all 80ms ease-in-out 0s;
-}
+// .coins {
+//   border: 1px solid rgba(211, 211, 211, 0.404);
+//   border-bottom: none;
+//   border-radius: 4px;
+//   transition: all 80ms ease-in-out 0s;
+// }
 
-.coins:hover {
-  background-color: rgba(211, 211, 211, 0.089);
-}
+// .coins:hover {
+//   background-color: rgba(211, 211, 211, 0.089);
+// }
 
-.index-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 62px;
-}
+// .index-item {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 62px;
+// }
 
-.basic-info{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-    align-items: center;
-}
+// .basic-info{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//     align-items: center;
+// }
 
-.price-info {
-    display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-    align-items: center;
-}
+// .price-info {
+//     display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//     align-items: center;
+// }
 
-.price {
-  padding-right: 10px;
-  position: absolute;
-  left: 360px;
-}
+// .price {
+//   padding-right: 10px;
+//   position: absolute;
+//   left: 360px;
+// }
 
-.change-up {
-  position: absolute;
-  left: 500px;
-  color: green;
-}
+// .change-up {
+//   position: absolute;
+//   left: 500px;
+//   color: green;
+// }
 
-.change-up:before {
-  content: "+";
-}
+// .change-up:before {
+//   content: "+";
+// }
 
-.change-down {
-  position: absolute;
-  left: 500px;
-  color: red;
-}
+// .change-down {
+//   position: absolute;
+//   left: 500px;
+//   color: red;
+// }
 
-.volume {
-  position: absolute;
-  left: 600px;
-}
+// .volume {
+//   position: absolute;
+//   left: 600px;
+// }
 
-.market-cap {
-  position: absolute;
-  left: 770px;
-}
+// .market-cap {
+//   position: absolute;
+//   left: 770px;
+// }
 
-.view-button {
-  background-color: rgb(22, 82, 240);
-  border: 1px solid rgb(22, 82, 240);
-  transition: all 80ms ease-in-out 0s;
-  color: white;
-  font-size: 14px;
-  font-weight: 400px;
-  padding: 10px 15px;
-  border-radius: 4px;
-  margin-right: 12px;
-  position: absolute;
-  left: 960px;
-}
+// .view-button {
+//   background-color: rgb(22, 82, 240);
+//   border: 1px solid rgb(22, 82, 240);
+//   transition: all 80ms ease-in-out 0s;
+//   color: white;
+//   font-size: 14px;
+//   font-weight: 400px;
+//   padding: 10px 15px;
+//   border-radius: 4px;
+//   margin-right: 12px;
+//   position: absolute;
+//   left: 960px;
+// }
 
-.view-button:hover {
-    background-color: rgb(17, 60, 220);
-    border-color: rgb(17, 60, 220);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-}
+// .view-button:hover {
+//     background-color: rgb(17, 60, 220);
+//     border-color: rgb(17, 60, 220);
+//     color: rgb(255, 255, 255);
+//     cursor: pointer;
+// }
 
-.watch-button {
-  border: 1px solid rgb(5, 177, 105);
-  background-color: rgb(5, 177, 105);
-  transition: all 80ms ease-in-out 0s;
-  color: white;
-  font-size: 14px;
-  font-weight: 400px;
-  padding: 10px 15px;
-  border-radius: 4px;
-  margin-right: 12px;
-  position: absolute;
-  left: 1040px;
-}
+// .watch-button {
+//   border: 1px solid rgb(5, 177, 105);
+//   background-color: rgb(5, 177, 105);
+//   transition: all 80ms ease-in-out 0s;
+//   color: white;
+//   font-size: 14px;
+//   font-weight: 400px;
+//   padding: 10px 15px;
+//   border-radius: 4px;
+//   margin-right: 12px;
+//   position: absolute;
+//   left: 1040px;
+// }
 
-.watch-button:hover {
-    background-color: rgb(0, 165, 93);
-    border-color: rgb(0, 165, 93);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-}
+// .watch-button:hover {
+//     background-color: rgb(0, 165, 93);
+//     border-color: rgb(0, 165, 93);
+//     color: rgb(255, 255, 255);
+//     cursor: pointer;
+// }
 
-.badge {
-  height: 30px;
-  width: auto;
-  padding-left: 12px;
-}
+// .badge {
+//   height: 30px;
+//   width: auto;
+//   padding-left: 12px;
+// }
 
-.full-name {
-  padding-left: 16px;
-}
+// .full-name {
+//   padding-left: 16px;
+// }
 
-.short-name {
-  padding-left: 12px;
-  color: rgba(0, 0, 0, 0.411);
+// .short-name {
+//   padding-left: 12px;
+//   color: rgba(0, 0, 0, 0.411);
+// }
+
+// .labels {
+//   margin-top: 40px;
+//   border: 1px solid rgba(211, 211, 211, 0.404);
+//   border-radius: 4px;
+//   border-bottom: none;
+//   font-size: 12px;
+//   font-family: lato;
+//   color: rgba(0, 0, 0, 0.404);
+//   margin-bottom: 0px;
+//   padding-top: 16px;
+//   padding-bottom: 16px;
+//   display: flex;
+//   text-align: center;
+//   width: 1098px;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+
+// .change {
+//   position: absolute;
+//   left: 500px;
+// }
+
+// .name-label {
+//   padding-left: 44px;
+// }
+
+
+// tbody .index-item {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+// }
+
+table {
+  table-layout: auto;
+  width: 1098px;
 }
 
 .labels {
@@ -207,5 +245,152 @@
 }
 
 .name-label {
-  padding-left: 44px;
+  min-width: 20%;
+  text-align: left;
+  margin-left: 30px;
+}
+
+
+.price {
+  min-width: 15%;
+  text-align: right;
+}
+
+.badge {
+height: 30px;
+width: auto;
+
+}
+
+.change {
+  min-width: 15%;
+  text-align: center;
+}
+
+.volume {
+  min-width: 15%;
+  text-align: left;
+}
+
+.market-cap {
+  min-width: 15%;
+  text-align: left;
+}
+
+.index-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 62px;
+  border: 1px solid rgba(211, 211, 211, 0.404);
+  border-bottom: none;
+  width: 1098px;
+}
+
+.coins {
+  border-bottom: none;
+  border-radius: 4px;
+  transition: all 80ms ease-in-out 0s;
+}
+
+.coins:hover {
+  background-color: rgba(211, 211, 211, 0.089);
+}
+
+.name-label {
+  display: flex;
+  align-items: center;
+}
+
+.full-name {
+  padding-left: 16px;
+}
+
+.short-name {
+  padding-left: 12px;
+  color: rgba(0, 0, 0, 0.411);
+}
+
+.change-up {
+  color: green;
+    min-width: 15%;
+      text-align: center;
+}
+
+.change-up:before {
+  content: "+";
+}
+
+.change-down {
+  min-width: 15%;
+  color: red;
+  text-align: center;
+}
+
+.view-button {
+  min-width: 10%;
+    background-color: rgb(22, 82, 240);
+  border: 1px solid rgb(22, 82, 240);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 20px;
+}
+
+.watch-button {
+  min-width: 10%;
+    border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+// .view-button {
+//   background-color: rgb(22, 82, 240);
+//   border: 1px solid rgb(22, 82, 240);
+//   transition: all 80ms ease-in-out 0s;
+//   color: white;
+//   font-size: 14px;
+//   font-weight: 400px;
+//   padding: 10px 15px;
+//   border-radius: 4px;
+//   margin-right: 12px;
+//   position: absolute;
+//   left: 960px;
+// }
+
+.view-button:hover {
+    background-color: rgb(17, 60, 220);
+    border-color: rgb(17, 60, 220);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+// .watch-button {
+//   border: 1px solid rgb(5, 177, 105);
+//   background-color: rgb(5, 177, 105);
+//   transition: all 80ms ease-in-out 0s;
+//   color: white;
+//   font-size: 14px;
+//   font-weight: 400px;
+//   padding: 10px 15px;
+//   border-radius: 4px;
+//   margin-right: 12px;
+//   position: absolute;
+//   left: 1040px;
+// }
+
+.watch-button:hover {
+    background-color: rgb(0, 165, 93);
+    border-color: rgb(0, 165, 93);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
