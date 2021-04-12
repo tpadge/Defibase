@@ -2,6 +2,7 @@ import {getCoins, getCoin, getList} from '../../actions/coin_actions';
 import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
+import SearchBar from '../search/searchbar'
 
 class CoinIndex extends React.Component {
   
@@ -30,6 +31,7 @@ class CoinIndex extends React.Component {
     const list = this.props.list
     return (
       <div>
+        <SearchBar />
         <section className="index-welcome">
         <div classname="index-copy">
         <h1>The future of finance is <span className="blue">decentralized.</span></h1>
