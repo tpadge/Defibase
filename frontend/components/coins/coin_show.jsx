@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {getCoin, getChart} from '../../actions/coin_actions';
-import {renderLineChart} from './chart';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { Link } from 'react-router-dom';
 
@@ -71,7 +70,7 @@ class CoinShow extends React.Component {
                 </div>
             </div>
             <div className="line">
-              <LineChart width={720} height={300} data={   this.feed(`${this.props.chart["chart"]}`) } >
+                <LineChart width={720} height={300} data={this.feed(`${this.props.chart["chart"]}`)} margin={{ top: 30, right: 0, bottom: 0, left: 0 }} >
                 <Line type="monotone" dataKey="price" stroke="rgb(22, 82, 240)" strokeWidth={2.5} />
                 <Tooltip />
               </LineChart> 

@@ -8,9 +8,8 @@ import { getDetails, getChartDetails, getList,getChart} from './utils/coin_compa
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root');
   let store;
-  if (window.currentUser) { //gets currentUser from appl.html.erb
+  if (window.currentUser) { 
     const preloadedState = {
       session: { id: window.currentUser.id },
       entities: {
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  
+  const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 
   window.getState = store.getState;

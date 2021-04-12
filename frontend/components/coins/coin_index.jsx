@@ -2,7 +2,7 @@ import {getCoins, getCoin, getList} from '../../actions/coin_actions';
 import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
-import SearchBar from '../search/searchbar'
+import SearchBar from '../search/searchbar';
 
 class CoinIndex extends React.Component {
   
@@ -97,6 +97,7 @@ const mDTP = dispatch => ({
 const mSTP = state => ({
   coins: state.entities.coins,
   list: state.entities.list 
+  
 })
 
 export default connect(mSTP, mDTP)(CoinIndex)
