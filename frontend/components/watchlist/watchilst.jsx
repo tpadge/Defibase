@@ -8,13 +8,27 @@ import trackedCoinsReducer from '../../reducers/track_coins_reducer';
 class WatchList extends React.Component {
   constructor(props) {
     super(props);
+    this.getNames = this.getNames.bind(this);
+    this.removeWatch = this.removeWatch.bind(this);
   }
 
   componentDidMount() {
     this.props.getList();
     this.props.getTracks();
-    this.getNames = this.getNames.bind(this);
     // debugger
+  }
+
+  formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+  }
+
+  removeWatch(name) {
+    debugger
+    Object.values(this.props.tracks).map(title => {
+      if (title.name === name) {
+        this.props.destroyTrack(title.id)
+      }
+    })
   }
 
   getNames(obj) {
@@ -59,13 +73,11 @@ class WatchList extends React.Component {
 
       // 3. Do both at the same time
 
-      <div>
-        <table>
-          <tbody>
-          <tr className ="watchlist-header">
-            <th>Coins</th>
-          </tr>
-          </tbody>
+      <div className="user-watchlist">
+        <div className="back"><Link to="/coins">&#8592; Back to list</Link></div>
+        <h1 className="my-watch">Watchlist</h1>
+        <table className="watch-table">
+
         {Object.keys(this.props.list).map((num, i) => {
           if ((this.getNames(this.props.tracks)).includes(list[num].id)) {
           return (
@@ -73,17 +85,16 @@ class WatchList extends React.Component {
               <tr className="watched-coin">
                 <td className="watch-items"><img className="badge" src={list[num].image} />
                   <span className="watch-name">{list[num].name}</span>
-                  <span className="watch-symbol">{list[num].symbol.toUpperCase()}</span>
-                  <span className="watch-price">{list[num].current_price.toFixed(2)}</span>
-                  <span className={
+                  <span className="watch-symbol">{list[num].symbol.toUpperCase()}</span></td>
+                <td className="watch-price">${this.formatNumber(list[num].current_price.toFixed(2))}</td>
+                  <td span className={
                     list[num].price_change_percentage_24h < 0
-                      ? "change-down"
-                      : "change-up"
+                      ? "watch-change-down"
+                      : "watch-change-up"
                   }>{list[num].price_change_percentage_24h.toFixed(2)}%
-                </span>
-                  <button className="view-button"><Link to={`/coins/${list[num].id}`}>View</Link></button>
                 </td>
-
+                <td><button className="view-button"><Link to={`/coins/${list[num].id}`}>View</Link></button></td>
+                <td><button className="unwatch" onClick={(e) => this.removeWatch(list[num].id)}>Unwatch</button></td>
               </tr>
             </tbody>
           ) 
@@ -95,7 +106,6 @@ class WatchList extends React.Component {
   } 
 
 }
-
 
 const mDTP = dispatch => ({
   getList: () => dispatch(getList()),

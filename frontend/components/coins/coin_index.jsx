@@ -17,6 +17,10 @@ class CoinIndex extends React.Component {
     this.props.getTracks();
   }
 
+  addWatch(coinId, user) {
+    this.props.newTrack({name: coinId, user_id: user})
+  }
+
   capitalize(string) {
 
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -73,7 +77,7 @@ class CoinIndex extends React.Component {
                     <td className="volume">${this.formatNumber(list[title].total_volume)}</td>
                     <td className="market-cap">${this.formatNumber(list[title].market_cap)}</td>
                     <td><button className="view-button"><Link to={`/coins/${list[title].id}`}>View</Link></button></td>
-                    <td><button className="watch-button">Watch</button></td>
+                    <td><button className="watch-button" onClick={(e) => this.addWatch(list[title].id, this.props.user_id)}>Watch</button></td>
 
                   </tr>
 
@@ -103,7 +107,8 @@ const mDTP = dispatch => ({
 const mSTP = state => ({
   coins: state.entities.coins,
   list: state.entities.list, 
-  tracks: state.entities.tracks
+  tracks: state.entities.tracks,
+  user_id: state.session.id
 })
 
 export default connect(mSTP, mDTP)(CoinIndex)

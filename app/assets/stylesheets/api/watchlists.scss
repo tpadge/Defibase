@@ -1,3 +1,111 @@
 // Place all the styles related to the api::Watchlists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-watchlist {
+  font-family: lato;
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.watch-table {
+  margin-top: 20px;
+  width: 620px;
+  border: 1px solid rgba(211, 211, 211, 0.404);
+  border-radius: 4px;
+  border-collapse: separate; 
+}
+
+.my-watch {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.watch-items {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+}
+
+.watched-coin {
+  display: flex;
+  align-items: center;
+  transition: all 80ms ease-in-out 0s;
+}
+
+.watched-coin:hover {
+  background-color: rgba(211, 211, 211, 0.089);
+}
+
+.watch-items .badge {
+  height: 36px;
+  width: auto;
+}
+
+.watch-name {
+  font-size: 16px;
+  padding-left: 6px;
+}
+
+.watch-symbol {
+    font-size: 16px;
+  padding-left: 6px;
+    color: rgba(0, 0, 0, 0.47);
+}
+
+.watch-price {
+  padding-left: 20px;
+  width: 15%;
+  text-align: right;
+}
+
+.watch-change-up {
+  width: 20%;
+  font-size: 16px;
+  color: green;
+  text-align: center;
+}
+
+.watch-change-up:before {
+  content: "+";
+}
+
+.watch-change-down  {
+  width: 20%;
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
+
+.watchlist-header {
+  font-size: 16px;
+  text-align: left;
+  margin-top: 12px;
+}
+
+.unwatch {
+  min-width: 10%;
+  border: 1px solid rgb(5, 177, 105);
+  background-color: rgb(5, 177, 105);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  font-weight: 400px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.unwatch:hover {
+    background-color: rgb(0, 165, 93);
+    border-color: rgb(0, 165, 93);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}

@@ -14,9 +14,9 @@ export const createTrack = coin => ({
   coin
 });
 
-export const removeTrack = id => ({
+export const removeTrack = coin => ({
   type: REMOVE_TRACK,
-  id
+  coin
 });
 
 export const getTracks = () => dispatch => (
@@ -35,7 +35,7 @@ export const newTrack = coin => dispatch => (
 
 export const destroyTrack = id => dispatch => (
   APIUtil.deleteTrack(id)
-  .then(() => (
-    dispatch(removeTrack(id))
+  .then((coin) => (
+    dispatch(removeTrack(coin))
   ))
 );

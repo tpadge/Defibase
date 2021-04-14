@@ -14,6 +14,7 @@ class Api::TrackedCoinsController < ApplicationController
   def destroy
     @tracked_coin = TrackedCoin.find(params[:id])
     @tracked_coin.delete
+    render :show
   end
 
   private

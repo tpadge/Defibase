@@ -12,7 +12,7 @@ const trackedCoinsReducer = (oldState = {}, action) => {
       nextState[action.coin.name] = action.coin;
       return nextState;
     case REMOVE_TRACK:
-      delete nextState[action.id];
+      delete nextState[action.coin.name];
       return nextState;
     default:
       return oldState;
