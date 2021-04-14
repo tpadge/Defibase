@@ -10,11 +10,47 @@ class CoinIndex extends React.Component {
   
   constructor(props) {
     super(props);
+    this.getNames = this.getNames.bind(this);
+    this.removeWatch = this.removeWatch.bind(this);
+    this.checkWatch = this.checkWatch.bind(this);
   }
 
   componentDidMount(){
     this.props.getList();
     this.props.getTracks();
+  }
+
+  removeWatch(name) {
+    Object.values(this.props.tracks).map(title => {
+      if (title.name === name) {
+        this.props.destroyTrack(title.id)
+      }
+    })
+  }
+
+  getNames(obj) {
+    let names = [];
+    Object.values(obj).map(key => {
+      if (key.userId === this.props.user_id)
+        names.push(key.name)
+    })
+    return names;
+  }
+
+  checkWatch(name){
+    const list = this.props.list;
+    const tracks = this.props.tracks;
+
+      if ((this.getNames(this.props.tracks)).includes(name)) {
+        return (
+          <button className="unwatch" onClick={(e) => this.removeWatch(name)}>Unwatch</button>
+        )
+      } else {
+        return (
+          <button className="watch-button" onClick={(e) => this.addWatch(name, this.props.user_id)}>Watch</button>
+        )
+      }
+    
   }
 
   addWatch(coinId, user) {
@@ -77,8 +113,8 @@ class CoinIndex extends React.Component {
                     <td className="volume">${this.formatNumber(list[title].total_volume)}</td>
                     <td className="market-cap">${this.formatNumber(list[title].market_cap)}</td>
                     <td><button className="view-button"><Link to={`/coins/${list[title].id}`}>View</Link></button></td>
-                    <td><button className="watch-button" onClick={(e) => this.addWatch(list[title].id, this.props.user_id)}>Watch</button></td>
-
+                    {/* <td><button className="watch-button" onClick={(e) => this.addWatch(list[title].id, this.props.user_id)}>Watch</button></td> */}
+                      <td>{this.checkWatch(list[title].id)}</td>
                   </tr>
 
                   </tbody>

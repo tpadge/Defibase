@@ -1,2 +1,2 @@
-json.extract!   @tracked_coin, :name, :user_id
+json.extract!   @tracked_coin, :name, :user_id, :id
 

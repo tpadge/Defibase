@@ -23,7 +23,6 @@ class WatchList extends React.Component {
   }
 
   removeWatch(name) {
-    debugger
     Object.values(this.props.tracks).map(title => {
       if (title.name === name) {
         this.props.destroyTrack(title.id)
@@ -87,7 +86,7 @@ class WatchList extends React.Component {
                   <span className="watch-name">{list[num].name}</span>
                   <span className="watch-symbol">{list[num].symbol.toUpperCase()}</span></td>
                 <td className="watch-price">${this.formatNumber(list[num].current_price.toFixed(2))}</td>
-                  <td span className={
+                  <td className={
                     list[num].price_change_percentage_24h < 0
                       ? "watch-change-down"
                       : "watch-change-up"
