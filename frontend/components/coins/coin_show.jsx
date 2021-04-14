@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getCoin, getChart} from '../../actions/coin_actions';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { Link } from 'react-router-dom';
+import { getTracks, newTrack, destroyTrack } from '../../actions/tracked_coin_actions';
 
 class CoinShow extends React.Component {
 
@@ -13,6 +14,7 @@ class CoinShow extends React.Component {
   componentDidMount(){
     this.props.getCoin(this.props.match.params.id);
     this.props.getChart(this.props.match.params.id);
+    this.props.getTracks();
   }
 
   formatNumber(num) {
@@ -48,8 +50,9 @@ class CoinShow extends React.Component {
             <h2>({this.props.coins.symbol})</h2>
           </div>
           <div className="show-buttons">
-            <button className="show-trade-button"><a href={this.props.coins.trade} target="_blank">Trade {this.props.coins.name}</a></button>
             <button className="show-watch-button">Add to watchlist</button>
+            <button className="show-trade-button"><a href={this.props.coins.trade} target="_blank">Trade {this.props.coins.name}</a></button>
+            <button className="show-watch-button"><Link to="/watchlist">View watchlist</Link></button>
           </div>
         </div>
 
@@ -115,12 +118,16 @@ class CoinShow extends React.Component {
 
 const mDTP = dispatch => ({
   getCoin: name => dispatch(getCoin(name)),
-  getChart: name => dispatch(getChart(name))
+  getChart: name => dispatch(getChart(name)),
+  getTracks: () => dispatch(getTracks()),
+  newTrack: coin => dispatch(newTrack(coin)),
+  destroyTrack: id => dispatch(destroyTrack(id))
 });
 
 const mSTP = state => ({
   coins: state.entities.coins,
-  chart: state.entities.chart
+  chart: state.entities.chart,
+  tracks: state.entities.tracks
 });
 
 export default connect(mSTP, mDTP)(CoinShow);

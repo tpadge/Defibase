@@ -1,8 +1,10 @@
 import {getCoins, getCoin, getList} from '../../actions/coin_actions';
+import {getTracks, newTrack, destroyTrack} from '../../actions/tracked_coin_actions';
 import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import SearchBar from '../search/searchbar';
+
 
 class CoinIndex extends React.Component {
   
@@ -12,9 +14,11 @@ class CoinIndex extends React.Component {
 
   componentDidMount(){
     this.props.getList();
+    this.props.getTracks();
   }
 
   capitalize(string) {
+
   return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
@@ -23,7 +27,6 @@ class CoinIndex extends React.Component {
   }
 
   render(){
-
     if (Object.keys(this.props.list).length === 0) return null ;
     const list = this.props.list
     return (
@@ -35,7 +38,7 @@ class CoinIndex extends React.Component {
         <h3>View coins to learn more about defi</h3>
         <h3>If you like a coin, add it to your watchlist</h3>
                 <div className="index-buttons">
-          <button className="watchlist">View your watchlist</button>
+              <button className="watchlist"><Link to="/watchlist">View your watchlist</Link></button>
         </div>
         </div>
         </section>
@@ -91,13 +94,16 @@ class CoinIndex extends React.Component {
 const mDTP = dispatch => ({
   getCoin: name => dispatch(getCoin(name)),
   getCoins: name => dispatch(getCoins(name)),
-  getList: () => dispatch(getList())
+  getList: () => dispatch(getList()),
+  getTracks: () => dispatch(getTracks()),
+  newTrack: coin => dispatch(newTrack(coin)),
+  destroyTrack: id => dispatch(destroyTrack(id))
 });
 
 const mSTP = state => ({
   coins: state.entities.coins,
-  list: state.entities.list 
-  
+  list: state.entities.list, 
+  tracks: state.entities.tracks
 })
 
 export default connect(mSTP, mDTP)(CoinIndex)
