@@ -50368,3 +50368,458 @@ Processing by Api::TrackedCoinsController#index as JSON
 Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.4ms)
 
 
+Started DELETE "/api/session" for ::1 at 2021-04-14 17:08:36 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "g6SibkEd2tXDsmyOdKnS6A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "avXsOt793hfOMYL66j_AJw"], ["updated_at", "2021-04-15 00:08:36.520164"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.4ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/session" for ::1 at 2021-04-14 17:08:41 -0700
+Started POST "/api/session" for ::1 at 2021-04-14 17:08:41 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"kilativ@hte.eth", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Load (214.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:25
+Completed 401 Unauthorized in 216ms (Views: 0.1ms | ActiveRecord: 214.5ms)
+
+
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "LJiOFc1ZCQEwaQHTNsNchA"], ["updated_at", "2021-04-15 00:08:42.221592"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 230ms (Views: 7.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:08:42 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.4ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (3.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-04-14 17:08:44 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LJiOFc1ZCQEwaQHTNsNchA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "s13AHHDtpantqSc73myuxw"], ["updated_at", "2021-04-15 00:08:44.644357"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/user" for ::1 at 2021-04-14 17:08:58 -0700
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"testingagain@test.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testingagain@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "testingagain@test.com"], ["password_digest", "$2a$12$VBr2paXoAmTJ0j2kodO80.Gqoe/zvznNb02.tHBWnQUFV0FFCXP6S"], ["session_token", "6XgKncTRdRXFKgdI1MBoCg"], ["created_at", "2021-04-15 00:08:58.357411"], ["updated_at", "2021-04-15 00:08:58.357411"]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "testingagain@test.com"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "r9qUhnqZaK-Rm5bJNz2H-A"], ["updated_at", "2021-04-15 00:08:58.362323"], ["id", 26]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 230ms (Views: 7.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:08:58 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (2.1ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (5.3ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/tracked_coins" for ::1 at 2021-04-14 17:09:00 -0700
+Processing by Api::TrackedCoinsController#create as JSON
+  Parameters: {"coin"=>{"name"=>"bitcoin", "user_id"=>"26"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mTrackedCoin Create (0.5ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:09:00.292456"], ["updated_at", "2021-04-15 00:09:00.292456"], ["name", "bitcoin"], ["user_id", 26]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  Rendering api/tracked_coins/show.json.jbuilder
+  Rendered api/tracked_coins/show.json.jbuilder (0.4ms)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/tracked_coins" for ::1 at 2021-04-14 17:09:01 -0700
+Processing by Api::TrackedCoinsController#create as JSON
+  Parameters: {"coin"=>{"name"=>"ethereum", "user_id"=>"26"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mTrackedCoin Create (0.4ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:09:01.009494"], ["updated_at", "2021-04-15 00:09:01.009494"], ["name", "ethereum"], ["user_id", 26]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  Rendering api/tracked_coins/show.json.jbuilder
+  Rendered api/tracked_coins/show.json.jbuilder (0.4ms)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/tracked_coins" for ::1 at 2021-04-14 17:09:01 -0700
+Processing by Api::TrackedCoinsController#create as JSON
+  Parameters: {"coin"=>{"name"=>"ripple", "user_id"=>"26"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[36mTrackedCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:09:01.665479"], ["updated_at", "2021-04-15 00:09:01.665479"], ["name", "ripple"], ["user_id", 26]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/tracked_coins_controller.rb:10
+  Rendering api/tracked_coins/show.json.jbuilder
+  Rendered api/tracked_coins/show.json.jbuilder (0.5ms)
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/api/tracked_coins/84" for ::1 at 2021-04-14 17:09:04 -0700
+Started DELETE "/api/tracked_coins/110" for ::1 at 2021-04-14 17:09:04 -0700
+Processing by Api::TrackedCoinsController#destroy as JSON
+  Parameters: {"id"=>"84"}
+Processing by Api::TrackedCoinsController#destroy as JSON
+  [1m[36mTrackedCoin Load (0.9ms)[0m  [1m[34mSELECT  "tracked_coins".* FROM "tracked_coins" WHERE "tracked_coins"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  Parameters: {"id"=>"110"}
+  ↳ app/controllers/api/tracked_coins_controller.rb:15
+  [1m[36mTrackedCoin Load (0.9ms)[0m  [1m[34mSELECT  "tracked_coins".* FROM "tracked_coins" WHERE "tracked_coins"."id" = $1 LIMIT $2[0m  [["id", 110], ["LIMIT", 1]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:15
+  [1m[36mTrackedCoin Destroy (1.9ms)[0m  [1m[31mDELETE FROM "tracked_coins" WHERE "tracked_coins"."id" = $1[0m  [["id", 84]]
+  ↳ app/controllers/api/tracked_coins_controller.rb:16
+  Rendering api/tracked_coins/show.json.jbuilder
+  Rendered api/tracked_coins/show.json.jbuilder (0.4ms)
+  [1m[36mTrackedCoin Destroy (7.0ms)[0m  [1m[31mDELETE FROM "tracked_coins" WHERE "tracked_coins"."id" = $1[0m  [["id", 110]]
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 2.8ms)
+
+
+  ↳ app/controllers/api/tracked_coins_controller.rb:16
+  Rendering api/tracked_coins/show.json.jbuilder
+  Rendered api/tracked_coins/show.json.jbuilder (0.2ms)
+Completed 200 OK in 21ms (Views: 9.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:09:05 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (3.0ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (8.9ms)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:09:07 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.4ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (4.4ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-04-14 17:10:27 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "r9qUhnqZaK-Rm5bJNz2H-A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "testingagain@test.com"], ["id", 26], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mjW0hdicd9S23pD7P1-02g"], ["updated_at", "2021-04-15 00:10:27.833916"], ["id", 26]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/session" for ::1 at 2021-04-14 17:10:32 -0700
+Started POST "/api/session" for ::1 at 2021-04-14 17:10:32 -0700
+Processing by Api::SessionsController#create as JSON
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"kilativ@hte.eth", "password"=>"[FILTERED]"}}
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Load (214.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  ↳ app/models/user.rb:25
+Completed 401 Unauthorized in 216ms (Views: 0.1ms | ActiveRecord: 214.4ms)
+
+
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "_LHQms9wte2CkhMKgR4l0A"], ["updated_at", "2021-04-15 00:10:32.779339"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 236ms (Views: 8.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:10:32 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.5ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (5.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:10:39 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.8ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (4.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-04-14 17:12:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_LHQms9wte2CkhMKgR4l0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 154ms (Views: 148.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:12:27 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (2.6ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (7.0ms)
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 2.6ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mTrackedCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:12:43.925613"], ["updated_at", "2021-04-15 00:12:43.925613"], ["name", "ethereum"], ["user_id", 16]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:23
+  [1m[36mTrackedCoin Create (0.4ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:12:43.929832"], ["updated_at", "2021-04-15 00:12:43.929832"], ["name", "bitcoin"], ["user_id", 16]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mTrackedCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:12:43.933541"], ["updated_at", "2021-04-15 00:12:43.933541"], ["name", "eos"], ["user_id", 16]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mTrackedCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("created_at", "updated_at", "name", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-04-15 00:12:43.936984"], ["updated_at", "2021-04-15 00:12:43.936984"], ["name", "uniswap"], ["user_id", 16]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+Started DELETE "/api/session" for ::1 at 2021-04-14 17:12:48 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "_LHQms9wte2CkhMKgR4l0A"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7ijPXef_Yoaar3sQVepmSg"], ["updated_at", "2021-04-15 00:12:48.032232"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.1ms)
+Completed 200 OK in 22ms (Views: 12.2ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/session" for ::1 at 2021-04-14 17:12:52 -0700
+Started POST "/api/session" for ::1 at 2021-04-14 17:12:52 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"kilativ@hte.eth", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  [1m[36mUser Load (222.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+Completed 401 Unauthorized in 225ms (Views: 0.2ms | ActiveRecord: 222.8ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (12.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (3.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DRqej6XkoAjz9Eq0LQZ7jw"], ["updated_at", "2021-04-15 00:12:53.193501"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.2ms)
+Completed 200 OK in 262ms (Views: 10.6ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:12:53 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (3.4ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (11.8ms)
+Completed 200 OK in 30ms (Views: 26.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:12:58 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (3.7ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (15.1ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:13:07 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.5ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (6.3ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-04-14 17:13:08 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DRqej6XkoAjz9Eq0LQZ7jw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3bdmMY1R2I8ep72G_xxzZg"], ["updated_at", "2021-04-15 00:13:08.508042"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 17ms (Views: 9.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/session" for ::1 at 2021-04-14 17:13:11 -0700
+Started POST "/api/session" for ::1 at 2021-04-14 17:13:11 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"", "password"=>"[FILTERED]"}}
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"kilativ@hte.eth", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:25
+  ↳ app/models/user.rb:25
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "kilativ@hte.eth"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "bBnmPHXpvfAE-l59wmgs3w"], ["updated_at", "2021-04-15 00:13:11.291661"], ["id", 16]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 230ms (Views: 8.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/tracked_coins" for ::1 at 2021-04-14 17:13:11 -0700
+Processing by Api::TrackedCoinsController#index as JSON
+  Rendering api/tracked_coins/index.json.jbuilder
+  [1m[36mTrackedCoin Load (0.4ms)[0m  [1m[34mSELECT "tracked_coins".* FROM "tracked_coins"[0m
+  ↳ app/views/api/tracked_coins/index.json.jbuilder:1
+  Rendered api/tracked_coins/index.json.jbuilder (5.4ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
