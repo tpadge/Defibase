@@ -8,6 +8,7 @@ import Splash from './splash/splash';
 import CoinShow from './coins/coin_show';
 import CoinIndex from './coins/coin_index';
 import WatchList from './watchlist/watchilst';
+import Portfolio from "./portfolio/portfolio";
 
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
     <ProtectedRoute exact path="/coins" component={CoinIndex} />
     <ProtectedRoute path= "/coins/:id" component={CoinShow} />
     <ProtectedRoute path= "/watchlist" component={WatchList} />
+    <ProtectedRoute path="/portfolio" component={Portfolio} />
   </Switch>
   </div>
 

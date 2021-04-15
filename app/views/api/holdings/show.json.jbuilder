@@ -1,0 +1,1 @@
+json.extract! @holding, :name, :id, :user_id, :quantity

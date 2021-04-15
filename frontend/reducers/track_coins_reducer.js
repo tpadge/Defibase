@@ -9,32 +9,6 @@ const trackedCoinsReducer = (oldState = {}, action) => {
     case RECEIVE_TRACKS:
       return action.response;
     case CREATE_TRACK:
-  //     return Object.assign({}, oldState, {
-  //       tracks: state.tracks.concat({
-  //         nextState[action.coin.name] =  action.coin
-  //       })
-  //     })
-  // }
-
-//  {
-//    const newTrack = oldState.tracks.concat({
-//      action.coin.name: action.coin
-//    }) 
-//    return updateObject(state, { tracks: newTrack })
-//  }
-
-    // return {
-    //   ...oldState,
-    //     tracks: {
-    //       ...oldState.tracks,
-    //       action.coin.name: action.coin
-    //     }
-    // }
-
-      // return Object.assign({}, oldState, {
-
-      // })
-
       nextState[action.coin.id] = action.coin;
       return nextState;
     case REMOVE_TRACK:

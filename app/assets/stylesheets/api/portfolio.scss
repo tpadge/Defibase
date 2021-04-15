@@ -1,0 +1,22 @@
+.portfolio-main {
+  font-family: lato;
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.far-left {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.coin-row-badge {
+  height: 36px;
+  width: auto
+}
+
+.coin-row-name {
+  font-size: 16px;
+}
