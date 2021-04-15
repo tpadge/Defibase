@@ -31,7 +31,9 @@ class Portfolio extends React.Component {
     // debugger
     Object.values(obj).map(hold => {
       if ((hold.userId === this.props.user_id) && (hold.name === ref)) {
-        return (<p>{hold.quantity}</p>)
+        return (
+          <p>{hold.quantity}</p>
+            )
       }
     })
     
