@@ -16,7 +16,6 @@ const mDTP = dispatch => {
   return {
     processForm: (user) =>  dispatch(signup(user)),
     clearErrors: () => dispatch(clearErrors()),
-    demoLogin: () => dispatch(signup({ email: "kilativ@hte.eth", password: "sendit" }))
   };
 };
 

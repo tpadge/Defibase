@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {getCoin, getChart} from '../../actions/coin_actions';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 import { Link } from 'react-router-dom';
+import { getTracks, newTrack, destroyTrack } from '../../actions/tracked_coin_actions';
 
 class CoinShow extends React.Component {
 
@@ -13,6 +14,46 @@ class CoinShow extends React.Component {
   componentDidMount(){
     this.props.getCoin(this.props.match.params.id);
     this.props.getChart(this.props.match.params.id);
+    this.props.getTracks();
+    this.removeWatch = this.removeWatch.bind(this);
+    this.checkWatch = this.checkWatch.bind(this);
+  }
+
+  removeWatch(name) {
+    Object.values(this.props.tracks).map(title => {
+      if (title.name === name) {
+        this.props.destroyTrack(title.id)
+      }
+    })
+  }
+
+  getNames(obj) {
+    let names = [];
+    Object.values(obj).map(key => {
+      if (key.userId === this.props.user_id)
+        names.push(key.name)
+    })
+    return names;
+  }
+
+  checkWatch(name) {
+    const list = this.props.list;
+    const tracks = this.props.tracks;
+
+    if ((this.getNames(this.props.tracks)).includes(name)) {
+      return (
+        <button className="show-watch-button" onClick={(e) => this.removeWatch(name)}>Remove from watchlist</button>
+      )
+    } else {
+      return (
+        <button className="show-watch-button" onClick={(e) => this.addWatch(name, this.props.user_id)}>Add to watchlist</button>
+      )
+    }
+
+  }
+
+  addWatch(coinId, user) {
+    this.props.newTrack({ name: coinId, user_id: user })
   }
 
   formatNumber(num) {
@@ -48,8 +89,9 @@ class CoinShow extends React.Component {
             <h2>({this.props.coins.symbol})</h2>
           </div>
           <div className="show-buttons">
+            <span>{this.checkWatch(this.props.match.params.id)}</span>
             <button className="show-trade-button"><a href={this.props.coins.trade} target="_blank">Trade {this.props.coins.name}</a></button>
-            <button className="show-watch-button">Add to watchlist</button>
+            <button className="show-watch-button"><Link to="/watchlist">View watchlist</Link></button>
           </div>
         </div>
 
@@ -115,12 +157,17 @@ class CoinShow extends React.Component {
 
 const mDTP = dispatch => ({
   getCoin: name => dispatch(getCoin(name)),
-  getChart: name => dispatch(getChart(name))
+  getChart: name => dispatch(getChart(name)),
+  getTracks: () => dispatch(getTracks()),
+  newTrack: coin => dispatch(newTrack(coin)),
+  destroyTrack: id => dispatch(destroyTrack(id))
 });
 
 const mSTP = state => ({
   coins: state.entities.coins,
-  chart: state.entities.chart
+  chart: state.entities.chart,
+  tracks: state.entities.tracks,
+  user_id: state.session.id
 });
 
 export default connect(mSTP, mDTP)(CoinShow);

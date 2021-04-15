@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
-import { getDetails, getChartDetails, getList,getChart} from './utils/coin_compare';
-
+import { getDetails, getList, getChart} from './utils/coin_compare';
+import { fetchTracks, addTrack, deleteTrack } from './utils/track_api_utils';
+import {getTracks, newTrack, destroyTrack} from './actions/tracked_coin_actions';
 
 
 
@@ -26,7 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.getState = store.getState;
   window.getDetails = getDetails;
-  window.getChartDetails = getChartDetails;
   window.getList = getList;
   window.getChart = getChart;
+  window.fetchTracks = fetchTracks;
+  window.addTrack = addTrack;
+  window.deleteTrack = deleteTrack;
+  window.getTracks = getTracks;
+  window.newTrack = newTrack;
+  window.destroyTrack = destroyTrack;
 });

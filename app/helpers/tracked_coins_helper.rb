@@ -1,0 +1,2 @@
+module TrackedCoinsHelper
+end

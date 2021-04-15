@@ -15,6 +15,14 @@ class SessionForm extends React.Component {
     this.props.clearErrors();
   }
 
+  demoLogin(e){
+    e.preventDefault();
+    let demoUser = {
+      email: "kilativ@hte.eth", password: "sendit"
+    };
+    this.props.demoLogin(demoUser);
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -72,7 +80,8 @@ class SessionForm extends React.Component {
             <button className="session-submit" type="submit">{this.props.formType}</button>
             <br />
             {this.demo()}
-            {this.renderErrors()}
+            {/* <button className="demo-user-button" onClick={this.demoLogin}>D</button> */}
+            {this.renderErrors}
           </div>
     
         </form>

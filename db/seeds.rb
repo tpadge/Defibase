@@ -8,12 +8,20 @@
 
 User.create({ email: "kilativ@hte.eth", password: "sendit" })
 
-bitcoin = Currency.create({
-	symbol: 'BTC',
-	name: 'Bitcoin',
-})
+# bitcoin = Currency.create({
+# 	symbol: 'BTC',
+# 	name: 'Bitcoin',
+# })
 
-ethereum = Currency.create({
-	symbol: 'ETH',
-	name: 'Ethereum',
-})
+# ethereum = Currency.create({
+# 	symbol: 'ETH',
+# 	name: 'Ethereum',
+# })
+
+TrackedCoin.create({name: 'ethereum', user_id: 16})
+
+TrackedCoin.create({name: 'bitcoin', user_id: 16})
+
+TrackedCoin.create({name: 'eos', user_id: 16})
+
+TrackedCoin.create({name: 'uniswap', user_id: 16})
