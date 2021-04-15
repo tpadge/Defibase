@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 2021_04_13_211628) do
   end
 
   create_table "tracked_coins", force: :cascade do |t|
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.integer "user_id", null: false
   end
 
