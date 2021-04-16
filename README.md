@@ -35,16 +35,13 @@ Upon signing in, users are directed to their dashboard, showing all available co
 **Coin show**
 
 When hitting the "view" button, users are sent to a unique url for the selected coin. The charts are rendered via the ReChart library, which relies on a function that feeds the correct correct data in the correct format in order to render a real-time chart for price over the past 30 days. The watchlist button responds based to whether a user is "watching" the coin, while the trade button sends users to a trusted exchange.
+
 <img width="1440" alt="Screen Shot 2021-04-12 at 11 23 20 AM" src="https://user-images.githubusercontent.com/65377724/114442572-8a66a000-9b81-11eb-84ca-bb5b043d5e73.png">
  
-**Coin search**
-
-The search bar responds to the user's query, displaying all coins that match their input, sending them to the coin's show page onClick.
-<img width="1440" alt="Screen Shot 2021-04-12 at 11 26 14 AM" src="https://user-images.githubusercontent.com/65377724/114442985-082aab80-9b82-11eb-8839-5c62e59d8b5a.png">
-
 **User watchlist**
 
 Users can watch and unwatch coins, updating the state of "watching" accross the app
+
 <img width="1238" alt="Screen Shot 2021-04-16 at 9 10 29 AM" src="https://user-images.githubusercontent.com/65377724/115053481-07e92380-9e94-11eb-969e-39de6db50e1e.png">
 
 ### Code snippets
@@ -99,5 +96,3 @@ In order to render the correct coins owned by a user in their portfolio, three f
            </tbody>
          )}
        })
-
-
