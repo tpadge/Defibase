@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import trackedCoinsReducer from '../../reducers/track_coins_reducer';
+import Portfolio from '../portfolio/portfolio';
 
 class WatchList extends React.Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class WatchList extends React.Component {
       //   }</div>
 
       // 3. Do both at the same time
-
+  
       <div className="user-watchlist">
         <div className="back"><Link to="/coins">&#8592; Back to list</Link></div>
         <h1 className="my-watch">Watchlist</h1>
@@ -100,7 +101,10 @@ class WatchList extends React.Component {
           }})}
 
         </table>
+        
   </div>
+      
+     
     )
   } 
 

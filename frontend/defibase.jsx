@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store'
 import { getDetails, getList, getChart} from './utils/coin_compare';
 import { fetchTracks, addTrack, deleteTrack } from './utils/track_api_utils';
+import {fetchHolding, fetchHoldings, createHolding, updateHolding, deleteHolding} from './utils/holding_api_utli';
 import {getTracks, newTrack, destroyTrack} from './actions/tracked_coin_actions';
 
 
@@ -35,4 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getTracks = getTracks;
   window.newTrack = newTrack;
   window.destroyTrack = destroyTrack;
+  window.fetchHolding = fetchHolding;
+  window.fetchHoldings = fetchHoldings;
+  window.createHolding = createHolding;
+  window.updateHolding = updateHolding;
+  window.deleteHolding = deleteHolding;
 });

@@ -5,13 +5,15 @@ import detailsReducer from './coin_details_reducer';
 import listReducer from './listReducer';
 import chartReducer from './chart_reducer';
 import trackedCoinsReducer from './track_coins_reducer';
+import holdingsReducer from './holdings_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
   coins: detailsReducer,
   list: listReducer,
   chart: chartReducer,
-  tracks: trackedCoinsReducer
+  tracks: trackedCoinsReducer,
+  holdings: holdingsReducer
 });
 
 export default entitiesReducer;
