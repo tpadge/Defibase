@@ -57013,3 +57013,53 @@ Migrating to CreateHoldings (20210415023141)
   ↳ db/seeds.rb:35
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:35
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (4.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kilativ@hte.eth"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mTrackedCoin Create (1.9ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ethereum"], ["created_at", "2021-04-16 00:08:10.536592"], ["updated_at", "2021-04-16 00:08:10.536592"], ["user_id", 16]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mTrackedCoin Create (0.3ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "bitcoin"], ["created_at", "2021-04-16 00:08:10.542093"], ["updated_at", "2021-04-16 00:08:10.542093"], ["user_id", 16]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mTrackedCoin Create (0.4ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "eos"], ["created_at", "2021-04-16 00:08:10.544828"], ["updated_at", "2021-04-16 00:08:10.544828"], ["user_id", 16]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mTrackedCoin Create (0.4ms)[0m  [1m[32mINSERT INTO "tracked_coins" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "uniswap"], ["created_at", "2021-04-16 00:08:10.546722"], ["updated_at", "2021-04-16 00:08:10.546722"], ["user_id", 16]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mHolding Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "holdings" WHERE "holdings"."user_id" = $1 AND "holdings"."name" = $2 LIMIT $3[0m  [["user_id", 1], ["name", "ethereum"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mHolding Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "holdings" WHERE "holdings"."user_id" = $1 AND "holdings"."name" = $2 LIMIT $3[0m  [["user_id", 1], ["name", "uniswap"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mHolding Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "holdings" WHERE "holdings"."user_id" = $1 AND "holdings"."name" = $2 LIMIT $3[0m  [["user_id", 1], ["name", "bitcoin"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:33

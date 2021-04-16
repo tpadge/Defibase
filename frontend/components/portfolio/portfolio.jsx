@@ -81,7 +81,7 @@ class Portfolio extends React.Component {
           <tbody >
             <tr className="portfolio-headers">
               <td className="portfolio-coin">Coin</td>
-              <td classname="portfolio-quantity">Quantity</td>
+              <td className="portfolio-quantity">Quantity</td>
               <td className= "portfolio-value">Value</td>
               <td className="portfolio-button"></td>
             </tr>
