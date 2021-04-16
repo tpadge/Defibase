@@ -51,7 +51,8 @@ Users can watch and unwatch coins, updating the state of "watching" accross the 
 **User portfolio**
 
 Users can view the coins they own via user holdings
-<img width="1440" alt="Screen Shot 2021-04-16 at 9 10 39 AM" src="https://user-images.githubusercontent.com/65377724/115053622-2cdd9680-9e94-11eb-9fac-657083a8ca78.png">
+<img width="884" alt="Screen Shot 2021-04-16 at 9 10 45 AM" src="https://user-images.githubusercontent.com/65377724/115053848-6dd5ab00-9e94-11eb-9098-209c2b291f0f.png">
+
 
 
 
