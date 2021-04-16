@@ -31,3 +31,15 @@ Holding.create({name: 'ethereum', quantity: 32, user_id: 1})
 Holding.create({name: 'uniswap', quantity: 32, user_id: 1})
 
 Holding.create({name: 'bitcoin', quantity: 1, user_id: 1})
+
+Holding.create({name: 'ethereum', quantity: 32, user_id: 4})
+
+Holding.create({name: 'uniswap', quantity: 32, user_id: 4})
+
+Holding.create({name: 'bitcoin', quantity: 1, user_id: 4})
+
+Holding.create({name: 'ethereum', quantity: 32, user_id: 3})
+
+Holding.create({name: 'uniswap', quantity: 32, user_id: 3})
+
+Holding.create({name: 'bitcoin', quantity: 1, user_id: 3})
