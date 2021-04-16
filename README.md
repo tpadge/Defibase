@@ -84,7 +84,7 @@ In order to render the correct coins owned by a user in their portfolio, three f
 
       if ((this.getNames(this.props.holdings)).includes(list[num].id)) {     
         let quantity = this.getQuantity(list[num].id);
-               
+        const list = this.props.list;       
           return (
              <tbody className="portfolio-ul" key={`num=${i}`}>
                <tr className="portfolio-items">
