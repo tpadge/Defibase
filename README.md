@@ -55,6 +55,57 @@ Users can watch and unwatch coins, updating the state of "watching" accross the 
 Users can view the coins they own via user holdings
 <img width="884" alt="Screen Shot 2021-04-16 at 9 10 45 AM" src="https://user-images.githubusercontent.com/65377724/115053848-6dd5ab00-9e94-11eb-9098-209c2b291f0f.png">
 
+### Code snippets
 
+In order to render the correct coins owned by a user in their portfolio, three functions were tied into a mapping of the coins present in state. The get names function matches coins in state to coins owned by the user, which are then assigned the corrrect quantity based on the current user via getQuantity. Finally, in order to calculate the total value of a stack of particular coin owned by the user, multiply is called by mapping through the data in the quantity key within the holdings slice of state, picking out the correct value for the particular coin owned by the current user.
+
+    getNames(obj) {
+    let names = [];
+    Object.values(obj).map(key => {
+      if (key.userId === this.props.user_id)
+        names.push(key.name)
+    })
+    return names;
+    }
+
+    multiply(num1, num2) {
+     var newNum = 1;
+      num2.map(num => {
+      if (num !== undefined) {
+        newNum = num;
+      }
+    })
+      return num1 * newNum;
+    }
+
+    getQuantity(ref) {
+
+    return Object.values(this.props.holdings).map(hold => {
+      if ((hold.userId === this.props.user_id) && (hold.name === ref)) {
+        return (
+          hold.quantity 
+            )
+      }
+    })
+    }
+
+          {Object.keys(this.props.list).map((num, i) => {
+
+            if ((this.getNames(this.props.holdings)).includes(list[num].id)) {
+             
+              let quantity = this.getQuantity(list[num].id);
+               
+              return (
+                  <tbody className="portfolio-ul" key={`num=${i}`}>
+                    <tr className="portfolio-items">
+                    <td className="portfolio-coin">{list[num].name}</td>
+                      <td className="portfolio-quantity">{quantity}</td>
+                    <td className="portfolio-value">${this.formatNumber(this.multiply(parseFloat((list[num].current_price)), quantity))}</td>
+                      <td className="portfolio-button"><button className="portfolio-view-button"><Link to={`/coins/${list[num].id}`}>View</Link></button></td>
+                  </tr>
+                </tbody>
+              )
+            }
+          })
 
 
