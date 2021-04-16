@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_211628) do
+ActiveRecord::Schema.define(version: 2021_04_15_023141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,10 +24,18 @@ ActiveRecord::Schema.define(version: 2021_04_13_211628) do
     t.index ["symbol"], name: "index_coins_on_symbol", unique: true
   end
 
-  create_table "tracked_coins", force: :cascade do |t|
+  create_table "holdings", force: :cascade do |t|
+    t.string "name"
+    t.integer "quantity"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
+  end
+
+  create_table "tracked_coins", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "user_id", null: false
   end
 

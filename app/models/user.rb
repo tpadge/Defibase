@@ -6,14 +6,25 @@ has_many :tracked_coins,
   foreign_key: :user_id,
   class_name: :TrackedCoin
 
+has_many :holdings,
+  foreign_key: :user_id,
+  class_name: :Holding
+
 validates :email, :password_digest, :session_token, presence: true
 validates :email, uniqueness: true
 validates :password, length: { minimum: 6 }, allow_nil: true
 
 after_initialize :ensure_session_token!
+# after_initialize :bonus!
+# after_initialize :free_coins!
 
-# def add_coin
+# def bonus!
+#   self.buying_power ||= 155900
+# end
 
+# def free_coins!
+#   self.holdings.create(name: 'ethereum', quantity: 32)
+#   self.holdings.create(name: 'bitcoin', quantity: 1)
 # end
 
 def password=(password)
