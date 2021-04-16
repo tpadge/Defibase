@@ -2,7 +2,7 @@
 
 ![favicon-32x32](https://user-images.githubusercontent.com/65377724/114439707-242c4e00-9b7e-11eb-8487-53dd7aaa8ab2.png)
 
-Defibase is a function Coinbase clone, allowing users to view, track, discover, and trade cryptocurrencies in the decentralized finance space.  Users can maintain their personal watchlist, view interactive price tracking of coins and gain important data on their favorite coins with the option to trade on live exchanges.
+Defibase is a functional Coinbase clone, allowing users to view, track, discover, and trade cryptocurrencies in the decentralized finance space.  Users can maintain their personal watchlist, view their owned coins, and utilize interactive price tracking of coins and gain important data on their favorite coins with the option to trade on external exchanges.
 
 [Live site](https://defibase.herokuapp.com/#/)
 
