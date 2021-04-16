@@ -78,6 +78,7 @@ class CoinIndex extends React.Component {
         <h3>View coins to learn more about defi</h3>
         <h3>If you like a coin, add it to your watchlist</h3>
                 <div className="index-buttons">
+              <button className="watchlist"><Link to="/portfolio">View your portfolio</Link></button>
               <button className="watchlist"><Link to="/watchlist">View your watchlist</Link></button>
         </div>
         </div>

@@ -2,21 +2,80 @@
   font-family: lato;
   width: 86%;
   margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  padding-top: 32px;
+  margin-bottom: 60px;
 }
 
-.far-left {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
+.port-badge {
+  height: 32px;
+  width: auto;
 }
 
-.coin-row-badge {
-  height: 36px;
-  width: auto
+.portfolio-table {
+    padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 20px;
+  width: 600px;
+  border: 1px solid rgba(211, 211, 211, 0.404);
+  border-radius: 4px;
+  border-collapse: separate; 
 }
 
-.coin-row-name {
-  font-size: 16px;
+.portfolio-headers {
+    color: rgba(0, 0, 0, 0.47);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.portfolio-view-button {
+  min-width: 10%;
+    background-color: rgb(22, 82, 240);
+  border: 1px solid rgb(22, 82, 240);
+  transition: all 80ms ease-in-out 0s;
+  color: white;
+  font-size: 14px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  font-weight: 400px;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.portfolio-view-button:hover {
+    background-color: rgb(17, 60, 220);
+    border-color: rgb(17, 60, 220);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.portfolio-coin {
+  width: 25%;
+  text-align: left;
+  padding-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+    transition: all 80ms ease-in-out 0s;
+}
+
+.portfolio-items {
+  transition: all 80ms ease-in-out 0s;
+}
+
+.portfolio-items:hover {
+  background-color: rgba(211, 211, 211, 0.089);
+}
+
+.portfolio-quantity {
+  width: 25%;
+  text-align: left;
+}
+
+.portfolio-value {
+  width: 25%;
+  text-align: left;
+}
+
+.portfolio-button {
+  width: 25%;
+
 }
