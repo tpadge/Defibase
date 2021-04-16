@@ -89,23 +89,21 @@ In order to render the correct coins owned by a user in their portfolio, three f
     })
     }
 
-          {Object.keys(this.props.list).map((num, i) => {
+    {Object.keys(this.props.list).map((num, i) => {
 
-            if ((this.getNames(this.props.holdings)).includes(list[num].id)) {
-             
-              let quantity = this.getQuantity(list[num].id);
+      if ((this.getNames(this.props.holdings)).includes(list[num].id)) {     
+        let quantity = this.getQuantity(list[num].id);
                
-              return (
-                  <tbody className="portfolio-ul" key={`num=${i}`}>
-                    <tr className="portfolio-items">
-                    <td className="portfolio-coin">{list[num].name}</td>
-                      <td className="portfolio-quantity">{quantity}</td>
-                    <td className="portfolio-value">${this.formatNumber(this.multiply(parseFloat((list[num].current_price)), quantity))}</td>
-                      <td className="portfolio-button"><button className="portfolio-view-button"><Link to={`/coins/${list[num].id}`}>View</Link></button></td>
-                  </tr>
-                </tbody>
-              )
-            }
-          })
+          return (
+             <tbody className="portfolio-ul" key={`num=${i}`}>
+               <tr className="portfolio-items">
+               <td className="portfolio-coin">{list[num].name}</td>
+               <td className="portfolio-quantity">{quantity}</td>
+               <td className="portfolio-value">${this.formatNumber(this.multiply(parseFloat((list[num].current_price)), quantity))}</td>
+               <td className="portfolio-button"><button className="portfolio-view-button"><Link to={`/coins/${list[num].id}`}>View</Link></button></td>
+             </tr>
+           </tbody>
+         )}
+       })
 
 
