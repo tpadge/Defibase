@@ -4,7 +4,7 @@
 
 Defibase is a functional Coinbase clone, allowing users to view, track, discover, and trade cryptocurrencies in the decentralized finance space.  Users can maintain their personal watchlist, view their owned coins, and utilize interactive price tracking of coins and gain important data on their favorite coins with the option to trade on external exchanges.
 
-[Live site](https://defibase.herokuapp.com/#/)
+[Live site](https://defibase-app.herokuapp.com/#/)
 
 ### Technologies used:
 
